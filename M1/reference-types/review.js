@@ -39,7 +39,7 @@ let person = {
 };
 
 // Hmmm... This line isn't updating the person object. Can you fix it?
-person.firstName.toUpperCase();
+Console.log(person.firstName.toUpperCase());
 
 // Don't change the line below. When you fix the code, it should log AVERY
 console.log("3. person.firstName:", person.firstName);
