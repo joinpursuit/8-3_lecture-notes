@@ -44,6 +44,18 @@ console.log(isValid(["AK", "NYC", "FL"])); //> false
 console.log(isValid(["AK", "WA", "FL"])); //> true
 
 /*
+  KEBAB CASE
+  ---------------
+  Write a function that returns a new array of all the states in kebab casing.
+*/
+function kebabCase(states) {}
+
+console.log(kebabCase(["Alaska", "New York", "Florida"]));
+//> [ "alaska", "new-york", "florida" ]
+console.log(kebabCase([]));
+//> []
+
+/*
   FIND
   ---------------
   Write a function that looks for a state by name. If that state is found, return the state name. If it is not found, return `null`.
@@ -52,3 +64,15 @@ function find(states, name) {}
 
 console.log(find(["Alaska", "New York", "Florida"], "Alaska")); //> "Alaska"
 console.log(find(["Alaska", "New York", "Florida"], "Montana")); //> null
+
+/*
+  FILTER ABBREVIATIONS
+  ---------------
+  Write a function that filters out all strings equal to or longer than 3 characters. Return a new array with just the valid abbreviations.
+*/
+function filterAbbreviations(states) {}
+
+console.log(filterAbbreviations(["AK", "MT", "WA", "NYC"]));
+//> [ "AK", "MT", "WA" ]
+console.log(filterAbbreviations(["Alaska", "New York", "Florida"]));
+//> []
