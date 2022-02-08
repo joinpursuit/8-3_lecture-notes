@@ -32,15 +32,20 @@ function wordCount(sentence) {
 
 console.log(wordCount("fly away fly away visit the moon"));
 
-// 1. Understand the problem
+// 1. Understand the problem: check!
 // function input: string that is a sentence
 // function output: object where the keys are words that appear in the sentence, the values are a number representing the word count
 // key terms: word frequencies
 // clarifying question: is the word frequency supposed to be a raw word count, or a percentage value? A: let's just use word count
 // clarifying question: What should we output sentence is an empty string? A: an empty object!
 
-// 2. Devise a plan
+// 2. Devise a plan: check!
 // Observation: this problem would be easier to solve if we had an array of words, rather than a single sentence as a string
+// See our pseudo code!
 
-// 3. Implement your plan
-// 4. Reflect
+// 3. Implement your solution: check!
+
+// 4. TODO: Reflect
+// Is our code correct? How can you tell?
+// Can we make our code easier to read?
+// Can we make our code more efficient?
