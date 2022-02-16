@@ -45,7 +45,6 @@ const groceryReceipts = [40.24, 130.97, 99.02, 85.55];
 
 console.log(subtractSpendingFromBudget(groceryBudget, groceryReceipts));
 
-<<<<<<< HEAD
 
 
 // Create an accumulator function which takes the following arguments:
@@ -66,7 +65,7 @@ function AddInviteMessage (invitees) {
 
 console.log(AddInviteMessage(invitees));
 
-=======
+
 /**
  * Create an accumulator pattern function which takes the following arguments:
  *      An array of strings including the names of each invitee to a dinner party
@@ -86,4 +85,4 @@ function formatInvite(invitees) {
 const partyGuests = ["matt", "krystal", "derek"];
 
 console.log(formatInvite(partyGuests));
->>>>>>> c62358dad36a156aa98094f9a78ac2bd2d2c2216
+
