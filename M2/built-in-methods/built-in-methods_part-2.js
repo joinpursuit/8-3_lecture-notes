@@ -17,7 +17,7 @@ function randomDecimal30To70() {
  * This time, generate a random INTEGER.
  * This task is important for selecting random elements of an array.
  *
- * Ask yourself: can your algorithm every return the number 30? How about the number 70? How do you know?
+ * Ask yourself: can your algorithm ever return the number 30? How about the number 70? How do you know?
  *
  * @returns {Integer} - a random integer between 30 and 70
  */
