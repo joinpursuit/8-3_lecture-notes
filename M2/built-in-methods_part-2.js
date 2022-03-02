@@ -7,8 +7,8 @@
  *
  * @returns {Number} - a random decimal number between 30 and 70
  */
-function randomDecimal30To70(thirty, seventy) {
-  Math.floor(Math.random() * 70) + 30
+function randomDecimal30To70() {
+  Math.random() * 40 + 30
 }
 
 /**
@@ -67,14 +67,27 @@ let exampleObject = {
  * @returns {String} - name of the highest paid role
  *
  */
-function highestSalary(roles) {}
+function highestSalary(roles) {
+  let roleName = ''
+  let roleSalary = 0;
+  
+    console.log('keys:', Object.keys(roles)) 
+console.log('values:', Object.values(roles))
+console.log('entries:', Object.entries(roles))
+let entries = Object.entries(roles);
+for (let entry of entries) {
+  console.log(entry[0])
+
+}
+return roleName;
+}
 
 let exampleRoles = {
   juniorDev: 90000,
   seniorDev: 160000,
   engineeringManager: 200000,
 };
-
+highestSalary(exampleRoles)
 /**
  * RESEARCH ACTIVITY
  *
