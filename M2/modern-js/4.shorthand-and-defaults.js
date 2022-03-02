@@ -39,3 +39,6 @@ console.log(greet()); //> "Welcome to NASA, space cadet!"
 /**
  * 4. What are some of the benefits of using default parameters? Are there any limitations? Write a brief response below.
  */
+// removing conditional logic from our function definitions
+//BUT
+//  you have to be careful about default values that are arrays or objects 
