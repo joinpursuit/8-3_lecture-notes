@@ -68,7 +68,6 @@ function transform(text, fn, ) {
   return 'LEFT';
 }
 
-<<<<<<< HEAD
 return right() {
   return 'right';
 }
@@ -80,16 +79,6 @@ upDownleft () {
   return 'UDL'
 }
 }
-=======
-const capitalize = () => {};
-
-// named
-transform('hello', capitalize);
-
-// anonymous
-transform('hello', function () {});
-
->>>>>>> e181697fbb1c4286af86d636a56a1c612e778523
 /**
  * Use the function above to transform the text in the following ways. For each line below, you will need to write an anonymous function.
  *
