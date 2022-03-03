@@ -4,19 +4,26 @@
 const first = "Nicole";
 const middle = "Aunapu";
 const last = "Mann";
+const name1 = {first, middle, last};
 
-// create an object with three key value pairs: { first: "Nicole", middle: "Aunapu", last: "Mann" }
-const fullName = {
-  first,
-  middle,
-  last,
+const fullName2 ={
+  first: first,
+  middle: middle,
+  last: last,
 };
 
-// Object short-hand converts the variable assignment operator "=" into the key/val associator operator ":"
 
+// Object shorthand converts the varibles asssignment operator '=' into key/val assoxiator operator ':'
+console.log(fullName2);
+console.log(name1);
 /**
  * 2. What are some of the benefits of using object shorthand? Are there any limitations? Write a brief response below.
  */
+// shorter!!
+
+//BUT 
+
+// you're stuck with the same name
 
 // shorter!
 
@@ -27,7 +34,10 @@ const fullName = {
 /**
  * 3. The function below expects that sometimes name will not be provided. Update the greet() function so that it uses default parameters.
  */
-const greet = (name = "space cadet") => `Welcome to NASA, ${name}!`;
+const greet = (name = 'space cadet') => `Welcome to NASA, ${name}!`;
+  
+
+
 
 console.log(greet("Jessica")); //> "Welcome to NASA, Jessica!"
 console.log(greet()); //> "Welcome to NASA, space cadet!"
@@ -35,7 +45,6 @@ console.log(greet()); //> "Welcome to NASA, space cadet!"
 /**
  * 4. What are some of the benefits of using default parameters? Are there any limitations? Write a brief response below.
  */
-
 // removing conditional logic from our function definitions
-// BUT
-// you have to be careful about default values that are arrays or objects
+//BUT
+//  you have to be careful about default values that are arrays or objects 

@@ -10,3 +10,6 @@ const trainCommuteTimes = [30, 62, 41, 39, 38, 31, 51, 53, 34, 40];
 
 // Hint: write a function that computes the average of an array of numbers.
 //   Use this function to find the average commute time for the train and for your car.
+function findAverage(){
+    
+}

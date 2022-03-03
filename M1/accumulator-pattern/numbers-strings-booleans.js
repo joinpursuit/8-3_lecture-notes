@@ -45,6 +45,27 @@ const groceryReceipts = [40.24, 130.97, 99.02, 85.55];
 
 console.log(subtractSpendingFromBudget(groceryBudget, groceryReceipts));
 
+
+
+// Create an accumulator function which takes the following arguments:
+// An array of strings including the names of each invitee to a dinner party
+// And returns the same array with each name replaced with the following message:
+// "Dear <name>, you are cordially invited to my dinner party."
+
+people = [Spiderman,Batman, Flash, Rogue ] 
+
+let invitees = ["Spiderman", "Flash", "Batman", "Superman", "Rogue"];
+
+function AddInviteMessage (invitees) {
+    for (let i = 0; i < invitees.length; i++) {
+        invitees[i] = `Dear ${invitees[i]}, you are cordially invited to my dinner party.`;
+    }
+    return invitees;
+}
+
+console.log(AddInviteMessage(invitees));
+
+
 /**
  * Create an accumulator pattern function which takes the following arguments:
  *      An array of strings including the names of each invitee to a dinner party
@@ -64,3 +85,4 @@ function formatInvite(invitees) {
 const partyGuests = ["matt", "krystal", "derek"];
 
 console.log(formatInvite(partyGuests));
+

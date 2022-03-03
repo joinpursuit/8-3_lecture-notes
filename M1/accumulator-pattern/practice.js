@@ -3,7 +3,9 @@
   ---------------
   Write a function that sums all numbers in an array.
 */
-function sumAllNumbers(numbers) {}
+function sumAllNumbers(numbers) {
+  
+}
 
 console.log(sumAllNumbers([10, 20, 30])); //> 60
 console.log(sumAllNumbers([10 - 10])); //> 0

@@ -8,23 +8,8 @@
  * @returns {Number} - a random decimal number between 30 and 70
  */
 function randomDecimal30To70() {
-  let rand = Math.random();
-  rand = rand * 40; // stretch by the width of the interval
-
-  // now we have a random number between 0 and 40.
-
-  rand = rand + 30; // shift by 30
-
-  // now we have a random num between 30 and 70!
-  return rand;
+  Math.random() * 40 + 30
 }
-
-// What does multiplication do to the interval?
-//    ->
-
-// for (let i = 0; i < 10; i += 1) {
-//   console.log(randomDecimal30To70());
-// }
 
 /**
  * REVIEW ACTIVITY - Part 2
@@ -83,23 +68,18 @@ let exampleObject = {
  *
  */
 function highestSalary(roles) {
-  let roleName = "";
+  let roleName = ''
   let roleSalary = 0;
+  
+    console.log('keys:', Object.keys(roles)) 
+console.log('values:', Object.values(roles))
+console.log('entries:', Object.entries(roles))
+let entries = Object.entries(roles);
+for (let entry of entries) {
+  console.log(entry[0])
 
-  console.log("keys:", Object.keys(roles));
-  console.log("values:", Object.values(roles));
-  console.log("entries:", Object.entries(roles));
-
-  let entries = Object.entries(roles);
-  for (let entry of entries) {
-    console.log(entry[0]);
-  }
-
-  // for (let value of roles) {
-  //   console.log(value);
-  // }
-
-  return roleName;
+}
+return roleName;
 }
 
 let exampleRoles = {
@@ -107,9 +87,7 @@ let exampleRoles = {
   seniorDev: 160000,
   engineeringManager: 200000,
 };
-
-highestSalary(exampleRoles);
-
+highestSalary(exampleRoles)
 /**
  * RESEARCH ACTIVITY
  *

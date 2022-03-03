@@ -15,6 +15,9 @@ console.log(typeof astro2);
 
 // You can tell we are using destructuring when there is a [] or a {} on the lhs of an =
 
+console.log(typeof astro3)
+
+// You can tell we are using a destructuring when there is a [] or a {} on the lhs of an =
 /**
  * 3. Use destructuring to create three new variables that represent each key-value pair in the following object.
  */
