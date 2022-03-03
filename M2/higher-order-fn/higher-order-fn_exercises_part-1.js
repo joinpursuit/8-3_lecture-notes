@@ -82,6 +82,24 @@ transform('hello', function () {});
  * "up Down left" -> "UDL"
  */
 
+console.log(
+  transform('up Down left', function (text) {
+    // split each word into an array, using the whitespace as the delimiter
+    const textArr = text.split(' ');
+    // create a temp variable to store result
+    let result = '';
+    // loop through the array
+    for (let word of textArr) {
+      // add the first char of each word to the result
+      result += word[0];
+    }
+    // capitalize the result
+    result = result.toUpperCase(); // strings can't be mutated
+
+    return result;
+  }),
+);
+
 /**
  * Write a fn called each which accepts two parameters:
  *  - an array
@@ -102,20 +120,20 @@ function each(arr, fn) {
 // 2
 // 3
 // 4
-each([1, 2, 3, 4], function (value) {
-  const transformedValue = value;
-  console.log(transformedValue);
-});
+// each([1, 2, 3, 4], function (value) {
+//   const transformedValue = value;
+//   console.log(transformedValue);
+// });
 
 // The following call to each should print
 // 2
 // 4
 // 6
 // 8
-each([1, 2, 3, 4], function (value) {
-  let transformedValue = value * 2;
-  console.log(transformedValue);
-});
+// each([1, 2, 3, 4], function (value) {
+//   let transformedValue = value * 2;
+//   console.log(transformedValue);
+// });
 
 /**
  * Write a fn called map which accepts two parameters:
@@ -136,12 +154,12 @@ function map(arr, fn) {
 
 // The following call to map should return
 // [2, 4, 6, 8];
-console.log(
-  map([1, 2, 3, 4], function (value) {
-    const transformedValue = value * 2;
-    return transformedValue;
-  }),
-);
+// console.log(
+//   map([1, 2, 3, 4], function (value) {
+//     const transformedValue = value * 2;
+//     return transformedValue;
+//   }),
+// );
 
 /**
  * Write a fn called reject which accepts two parameters:
@@ -169,18 +187,18 @@ function reject(arr, isAccepted) {
 
 // The following call to reject should return
 // [1, 2];
-console.log(
-  reject([1, 2, 3, 4], function (value) {
-    const transformedValue = value > 2;
-    return transformedValue;
-  }),
-);
+// console.log(
+//   reject([1, 2, 3, 4], function (value) {
+//     const transformedValue = value > 2;
+//     return transformedValue;
+//   }),
+// );
 
 // The following call to reject should return
 // [3, 5];
-console.log(
-  reject([2, 3, 4, 5], function (value) {
-    const transformedValue = value % 2 === 0;
-    return transformedValue;
-  }),
-);
+// console.log(
+//   reject([2, 3, 4, 5], function (value) {
+//     const transformedValue = value % 2 === 0;
+//     return transformedValue;
+//   }),
+// );
