@@ -25,6 +25,12 @@ console.log(name1);
 
 // you're stuck with the same name
 
+// shorter!
+
+// BUT
+
+// you're stuck with the same names
+
 /**
  * 3. The function below expects that sometimes name will not be provided. Update the greet() function so that it uses default parameters.
  */

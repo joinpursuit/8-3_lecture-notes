@@ -11,7 +11,7 @@ function greet(name) {
     result = "Welcome to NASA, space cadet!";
   }
   return result;
-}
+};
 
 console.log(greet2("Jessica")); //> "Welcome to NASA, Jessica!"
 console.log(greet2()); //> "Welcome to NASA, space cadet!"

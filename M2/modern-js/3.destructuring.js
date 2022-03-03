@@ -5,12 +5,15 @@
 // unpacking individual parts of an object or array
 // kind of the inverse of object shorthand
 
-
 /**
  * 2. Use destructuring to create three new variables from the following array.
  */
 const astronauts = ["Jessica Watkins", "Robert Shane", "Nicole Mann"];
-const[astro1, astro2, astro3] = astronauts;
+const [astro1, astro2, astro3] = astronauts;
+
+console.log(typeof astro2);
+
+// You can tell we are using destructuring when there is a [] or a {} on the lhs of an =
 
 console.log(typeof astro3)
 
@@ -24,8 +27,11 @@ const astronaut = {
   occupation: "Geologist",
 };
 
-const {occupation } = astronaut
+const { occupation } = astronaut;
 console.log(occupation);
+
+const getName = () => ["myra", "smith"];
+const [firstName, lastName] = getName();
 
 /**
  * 4. What are some benefits of using destructuring? Are there any limitations? Write a brief response below.
@@ -34,8 +40,7 @@ console.log(occupation);
 /**
  * 5. Apply destructuring to the following function.
  */
-function getAstronautActivityStatus({isActive, name}) {
-
+function getAstronautActivityStatus({ isActive, name }) {
   let result = "";
   if (isActive) {
     result = `${name} is active.`;
@@ -49,5 +54,5 @@ function getAstronautActivityStatus({isActive, name}) {
 //   name: "Jessica Watkins",
 //   isActive: true,
 //   occupation: "Geologist",
-//};
+// };
 getAstronautActivityStatus(astronaut); //> "Jessica Watkins is active."
