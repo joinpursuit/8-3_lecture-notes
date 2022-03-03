@@ -64,6 +64,14 @@ function transform(text, fn) {
   return fn(text);
 }
 
+const capitalize = () => {};
+
+// named
+transform('hello', capitalize);
+
+// anonymous
+transform('hello', function () {});
+
 /**
  * Use the function above to transform the text in the following ways. For each line below, you will need to write an anonymous function.
  *
