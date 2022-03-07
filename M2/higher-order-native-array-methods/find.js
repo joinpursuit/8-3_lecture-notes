@@ -1,4 +1,18 @@
 /**
+ * Array.find()
+ *
+ * The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+ *
+ * Further reading: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+ */
+
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found); // expected output: 12
+
+/**
  * 1
  *
  * What will be the difference between filterResult and findResult after the code is run below?
