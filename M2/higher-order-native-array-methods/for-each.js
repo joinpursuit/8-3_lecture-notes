@@ -1,10 +1,16 @@
 /**
+ * 1
+ *
  * The .forEach() method's callback function has up to three parameters. What are these parameters?
  */
 
 /**
+ * 2
+ *
  * Update the code below so that it uses .forEach() instead of a for loop. Inside of printAllComics() you will have to write another, anonymous function.
  */
+
+// do not edit the comics object
 const comics = [
   { title: 'Calvin & Hobbes', author: 'Bill Watterson', kind: 'print' },
   { title: 'Zen Pencils', author: 'Gavin Aung Than', kind: 'web' },
@@ -22,6 +28,8 @@ function printAllComics(comics) {
 printAllComics(comics);
 
 /**
+ * 3
+ * 
  * How can you update your .forEach() code so that it prints out the following?
 
 1. Calvin & Hobbes" by Bill Watterson
@@ -31,6 +39,8 @@ printAllComics(comics);
 */
 
 /**
+ * 4
+ * 
  * How can you update your .forEach() code so that it prints out the following?
 
 (1 out of 4) Calvin & Hobbes" by Bill Watterson
