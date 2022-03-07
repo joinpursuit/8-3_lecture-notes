@@ -1,3 +1,53 @@
+/**
+ * Array.map(fn) <-- higher order since it takes a fn parameter
+ *
+ * Side Effects: map CAN produce them, but this is bad practice
+ *
+ * Return Value: DOES return a value
+ *
+ * We want to transform an array
+ */
+
+let soccerTeams = [
+  'Manchester United',
+  'Real Madrid',
+  'Boca Juniors',
+  'NYC FC',
+];
+
+function printTeamSupport(team) {
+  return `I am a super fan of ${team}: this is the named function`;
+}
+
+let canProduceSideEffects = [];
+
+console.log(
+  soccerTeams.map(function (team) {
+    // canProduceSideEffects.push('yes'); // DO NOT DO THIS
+    return { name: team, fanMessage: printTeamSupport(team) }; // Rely on the return value to transform arrays
+  }),
+);
+
+// console.log(teamObjs);
+
+// console.log(canProduceSideEffects);
+
+// create a new array with each team having it's own object
+let soccerTeamsV2 = [];
+
+soccerTeams.forEach(function (team, index) {
+  // let teamObj = {
+  //   name: team,
+  //   fanMessage: printTeamSupport(team);
+  // }
+  // soccerTeamsV2.push(teamObj);
+  soccerTeamsV2[index] = {};
+  soccerTeamsV2[index].name = team;
+  soccerTeamsV2[index].fanMessage = printTeamSupport(team);
+});
+
+// console.log(soccerTeamsV2);
+
 // do not edit the comics object
 const comics = [
   { title: 'Calvin & Hobbes', author: 'Bill Watterson', kind: 'print' },
