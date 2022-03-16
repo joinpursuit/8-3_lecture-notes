@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Introduction to HTML</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d4594e4c-a0cf-4c36-b797-17d8c2e0432c" class="page sans"><header><h1 class="page-title">Introduction to HTML</h1></header><div class="page-body"><h1 id="cb8a1ef1-1554-476c-a63d-fb31fcfc7cf2" class="">Announcements</h1><ul id="ca175f7f-cc94-4c9e-8f3a-e6f800b0763a" class="bulleted-list"><li style="list-style-type:disc">Movie Night!</li></ul><ul id="77bc76d7-9377-4495-a1d5-06a24b13bbad" class="bulleted-list"><li style="list-style-type:disc">Today’s lab will use frontend testing that we will talk more in depth about tomorrow. Therefore the lab will be due Friday morning, instead of tomorrow morning.</li></ul><ul id="5d0cb6d4-86fb-449e-85c9-9f2c19a1a3b5" class="bulleted-list"><li style="list-style-type:disc">You’ll need a way to draw for class today. Could be pen and paper, a whiteboard, miro, etc.</li></ul><p id="747f010a-4be3-425a-b89e-969c8420c930" class="">
+</p><h1 id="dfcf9e7c-44ad-47d9-be24-8d94c1628773" class="">Review Questions</h1><ul id="7b0586cd-efe8-4522-a59c-b8f34bb9c7b1" class="bulleted-list"><li style="list-style-type:disc">What does HTML stand for?<ul id="68477adb-d0b9-4016-99bf-4d3632c5dc5f" class="bulleted-list"><li style="list-style-type:circle">Hyper Text Markup Language</li></ul><ul id="7b635817-1b7a-4501-9da2-700bc5af40b4" class="bulleted-list"><li style="list-style-type:circle">Defines WHAT/the structure a browser user sees on a page</li></ul><ul id="62dabeba-efba-4842-9b61-c6c35d6b56e4" class="bulleted-list"><li style="list-style-type:circle">Hyper Text: text documents that are linked to other text documents</li></ul></li></ul><ul id="94d57a33-1240-4ce3-a945-20eab5965e55" class="bulleted-list"><li style="list-style-type:disc">What does it mean that HTML is a markup language? How is this different than JavaScript?<ul id="faa40780-4660-45fe-9c61-8f6b9f73c008" class="bulleted-list"><li style="list-style-type:circle">Markup Language: Computer language that uses tags to define elements, end result is meant to be human readable</li></ul><ul id="4d5ad6e2-abd3-48e1-8e9d-75c50a7d969e" class="bulleted-list"><li style="list-style-type:circle">Markup language: we markup human readable content with info on how it should be displayed</li></ul><ul id="d6977d11-d034-4bf4-babe-3c41de9a46bb" class="bulleted-list"><li style="list-style-type:circle">Difference from JS: JS is not meant to be human readable, it’s a programming lang for computers to read</li></ul><ul id="040c3741-b6ad-4075-a3a0-1300837bde99" class="bulleted-list"><li style="list-style-type:circle">JS: the HOW web page behaves</li></ul></li></ul><ul id="f00253e6-ab8f-496c-b979-fe8c2eb357b5" class="bulleted-list"><li style="list-style-type:disc">What is an HTML element?<ul id="7a5e9033-8bae-4a42-8041-f732cb0a3271" class="bulleted-list"><li style="list-style-type:circle">Everything from a start tag to an end tag</li></ul><ul id="cd9b0199-60fa-4593-8610-e1fb44af9388" class="bulleted-list"><li style="list-style-type:circle">It tells a browser how to interpret content on a page</li></ul></li></ul><ul id="c981aa81-4c28-4bf9-8c2f-78d8596e5ee2" class="bulleted-list"><li style="list-style-type:disc">What is the difference between an HTML tag and an HTML element?<ul id="a069a242-214a-4737-89f7-f71a115c046d" class="bulleted-list"><li style="list-style-type:circle">Tags are the symbols used to denote the beginning and end of an element</li></ul></li></ul><ul id="f49f193c-a0eb-4f66-91d6-d8621e459643" class="bulleted-list"><li style="list-style-type:disc">The following is a paragraph element. How can you tell the difference between the opening and closing tags?<pre id="b39d4810-e47f-4fa4-b4f4-1203562c85bc" class="code"><code>&lt;p&gt;
+  The notable 19th-century architect of skyscrapers, Louis Sullivan, promoted
+  an overriding precept to architectural design: &quot;Form follows function&quot;.
+&lt;/p&gt;</code></pre><p id="f5a1b2a3-8526-4a4f-9659-39ba4ab98309" class="">
+</p><ul id="258449a6-0765-4e35-ab48-3f7f3e3daed9" class="bulleted-list"><li style="list-style-type:circle">Closing tags start with a &lt;/ </li></ul><ul id="eb2e272e-f5f8-4448-8306-7efbb289aef7" class="bulleted-list"><li style="list-style-type:circle">Open tags don’t have the slash</li></ul></li></ul><h1 id="fae309cf-436a-49be-a38a-7a30581c412a" class="">HTML Structure / Hierarchy</h1><h2 id="38dc4bb5-a616-487c-a232-8edb2c806864" class="">I Do</h2><p id="269b994c-e489-4426-ba13-f81a123ad4cd" class="">Draw a tree from an HTML file:</p><pre id="e5bbdd31-93d9-4c88-a153-2d09c932272e" class="code"><code>&lt;body&gt;
+  &lt;h1&gt;How to train for a marathon&lt;/h1&gt;
+  &lt;p&gt;This article will give you some pointers on how to train for a marathon.&lt;/p&gt;
+  &lt;h2&gt;Pick a date&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Find a marathon you would like to participate in&lt;/li&gt;
+    &lt;li&gt;Select something at least 6 months in the future&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;</code></pre><figure id="8397d021-16b3-45f8-bfd6-f9e0dec51da2"><div class="source"><a href="https://miro.com/app/board/uXjVOEvV7Bw=/?invite_link_id=325053603941">https://miro.com/app/board/uXjVOEvV7Bw=/?invite_link_id=325053603941</a></div></figure><h2 id="7339c5ca-bffb-4111-bd41-d8a7a8f6454a" class="">You Do</h2><p id="b73c2868-fb84-49e1-988a-35430e6db3a4" class="">Take 5 minutes to draw a tree based on the following HTML:</p><pre id="a714f7d1-8039-4d2a-8add-a879530dd29c" class="code"><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Todo List&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Pack camping gear&lt;/li&gt;
+      &lt;li&gt;Fill up gas tank&lt;/li&gt;
+      &lt;li&gt;Drive to the woods&lt;/li&gt;
+      &lt;li&gt;Start a campfire&lt;/li&gt;
+      &lt;li&gt;Chill&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre><p id="f3f1f97f-0e80-487a-b40e-2a42f7549afe" class="">Now take a minute to jot down your answer to the following:</p><ul id="116785c2-0f47-4bd0-ac7b-b018c4c3a430" class="bulleted-list"><li style="list-style-type:disc"> In the HTML above, the <code>h1</code> element is a <em>sibling </em>of the <code>ul</code> element. What does this mean?<ul id="7ad4b855-bdf3-4c22-9bde-6509efb3e55d" class="bulleted-list"><li style="list-style-type:circle">They share the same direct parent</li></ul></li></ul><h1 id="0e73ed7a-827d-4b88-a8d4-b828d4fdea95" class="">Types of HTML Tags</h1><p id="c8b6f9bd-3f76-49c6-9720-1047ab346864" class="">Find your name on the list below. Next to your name is a number, compute your number modulo 4. This will correspond to which html tag you look up.</p><p id="4307b4c2-162c-4d92-814d-7ad7f3d1418f" class="">
+</p><p id="496b8ddf-9ae6-4196-9a10-f35b0d45cfe1" class="">Take 4 minutes to answer ONE OF the following questions. You may find <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN’s HTML Elements documentation</a> helpful: </p><p id="d2bc5e2c-f40e-4dd4-b847-d1cab82861db" class="">
+</p><ol type="1" id="b4a7d2de-f2cb-44bd-9e38-e2892b5a048a" class="numbered-list" start="1"><li>What is the purpose of the <code>DOCTYPE</code> element?<ol type="a" id="1733db75-864b-4121-926e-828a2b9f0560" class="numbered-list" start="1"><li>Tells us what version of HTML is being used</li></ol><ol type="a" id="a930f2c4-746f-4eca-8869-c2104c6db360" class="numbered-list" start="2"><li>There’s more than one version of HTML!</li></ol><ol type="a" id="6b13098c-9705-4de6-9f3e-dbd96b66ceff" class="numbered-list" start="3"><li>We will typically use HTML5</li></ol></li></ol><ol type="1" id="1ecdfbfd-8cdc-43ae-b272-56092c1c3756" class="numbered-list" start="2"><li>What is the purpose of the <code>html</code> element?<ol type="a" id="75860552-ca06-4041-a26d-cb8a1ca8b453" class="numbered-list" start="1"><li>Root element for all an html doc</li></ol><ol type="a" id="6968e169-ed05-48f6-8ee0-0871b7be27b3" class="numbered-list" start="2"><li>All other elements should be descendants of the html element</li></ol><ol type="a" id="c5f9e61a-b4a3-4b94-86d8-b8b30008df79" class="numbered-list" start="3"><li>There should only be ONE</li></ol></li></ol><ol type="1" id="ce1af8ae-77b2-4304-b455-36651af0b51c" class="numbered-list" start="3"><li>What is the purpose of the <code>head</code> element?<ol type="a" id="9c850d46-658b-40d5-8b61-0d88a3faa3af" class="numbered-list" start="1"><li>contains metadata for a document</li></ol><ol type="a" id="fbbdd471-f543-4eee-8e0d-870f318ea00c" class="numbered-list" start="2"><li>it’s not displayed</li></ol><ol type="a" id="3bab5b7d-c598-4289-9812-254dd6ddc68c" class="numbered-list" start="3"><li>what is metadata? It’s information ABOUT a page that shouldn’t be displayed ON the page.</li></ol><ol type="a" id="5e7a11fd-ae36-4780-8264-85aaee02cbef" class="numbered-list" start="4"><li>examples: document title, language used, scripts (much more on this later), etc</li></ol><ol type="a" id="ba20b69f-4bcc-4485-8886-e0ff40a3a34f" class="numbered-list" start="5"><li>There should only be ONE</li></ol></li></ol><ol type="1" id="c55b4856-354a-4641-a9be-0f5f34121516" class="numbered-list" start="4"><li>What is the purpose of the <code>body</code> element?<ol type="a" id="0d3dc0f3-6676-477c-bfb4-70b221494687" class="numbered-list" start="1"><li>Represents the content of the HTML Doc</li></ol><ol type="a" id="cd9e3e31-fd3d-4dac-b9d8-cd56ba0974ea" class="numbered-list" start="2"><li>There can only be ONE</li></ol><ol type="a" id="11cb9d65-9900-42f0-a4af-7a1d97ce3672" class="numbered-list" start="3"><li>Everything a use sees, will be contained in the body</li></ol></li></ol><p id="b33b96be-7afb-4224-a0af-ca6aecea965a" class="">
+</p><h1 id="6a7a5508-08c0-4cc7-9a27-5cc923cff6d8" class="">Creating and viewing HTML</h1><ul id="3a7aa5d0-1be6-4a70-b12a-0ef8fa0e46f4" class="bulleted-list"><li style="list-style-type:disc">Create a new HTML file</li></ul><ul id="e8624ae1-9212-4d4f-a5ab-4458ec9e0aab" class="bulleted-list"><li style="list-style-type:disc">Use Emmet to generate boilerplate. Add a little bit of content.</li></ul><ul id="3d05bb1b-3660-4b00-aa04-022e50514545" class="bulleted-list"><li style="list-style-type:disc">Now open the html file in the browser.</li></ul><ul id="292bd922-96f7-4042-bf2a-2cf3f5d6be3d" class="bulleted-list"><li style="list-style-type:disc">Now inspect the html.</li></ul><ul id="18f72b42-b2b9-4697-9cf9-8d4a04e72936" class="bulleted-list"><li style="list-style-type:disc">Add content using the following tags. For each, ask a fellow to describe the element’s purpose.<ul id="9c49b396-73d5-47cd-a95e-89027f360b71" class="bulleted-list"><li style="list-style-type:circle"><code>h1</code></li></ul><ul id="204f8bb7-d792-4bdd-9df6-dde99c4fd757" class="bulleted-list"><li style="list-style-type:circle"><code>h2</code></li></ul><ul id="878d3025-0200-4b97-898f-175397614ca9" class="bulleted-list"><li style="list-style-type:circle"><code>ul</code></li></ul><ul id="1504b9fb-c155-4ef6-9f9e-96bab050420e" class="bulleted-list"><li style="list-style-type:circle"><code>ol</code></li></ul><ul id="32649e4d-553e-440c-a119-c3fbbb1ba914" class="bulleted-list"><li style="list-style-type:circle"><code>li</code></li></ul></li></ul><ul id="efc090e7-ef02-45f4-b7ac-c2b090a6362e" class="bulleted-list"><li style="list-style-type:disc">Add a comment to your html page</li></ul><ul id="70b19006-c4da-4ecd-bc3b-c3598df7eb06" class="bulleted-list"><li style="list-style-type:disc">Add an image. What is a self closing tag?</li></ul><ul id="748c5446-c11d-4cbe-8bfc-6b316a9b2aea" class="bulleted-list"><li style="list-style-type:disc">What are `src` and `alt`?</li></ul><ul id="f39e8c82-6ce7-4b79-a995-16c4e3b09f03" class="bulleted-list"><li style="list-style-type:disc">What is an html attribute?</li></ul><p id="2a7902f0-a481-41f5-814d-65febd6882b7" class="">
+</p><h1 id="120736e3-4aca-4b61-8437-c9e39c4c98dd" class="">HTML Errors &amp; Bugs</h1><ul id="844e363d-9069-4dcd-8eb3-0c40d6dcdedf" class="bulleted-list"><li style="list-style-type:disc">Is the following HTML valid? Why or why not? To help answer this question, please create an html file and open it in a browser.</li></ul><pre id="bf5cbbbb-776a-4d9c-b0b6-b890a279e620" class="code"><code>&lt;html&gt;&lt;/html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;Hello!&lt;/body&gt;</code></pre><ul id="b08db51e-ae7f-4987-b0d8-8a1a015a99ed" class="bulleted-list"><li style="list-style-type:disc">If HTML code is invalid, will you see an error?</li></ul><ul id="83166166-e5b0-4291-a615-b8a3d4a73571" class="bulleted-list"><li style="list-style-type:disc">Inspect the html file in your browser. Does what you see in the inspector match the source code? Why do you think the browser behaves this way?</li></ul></div></article></body></html>
