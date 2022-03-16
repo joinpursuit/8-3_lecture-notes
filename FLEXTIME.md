@@ -21,6 +21,14 @@ When you are given independent review time or study hall, we recommend the follo
 - Projects
 - Assessments
 
+### LPD & PBA Tasks
+
+- Reflections
+- Certifications
+- Tasks
+- Assignments
+- etc.
+
 ### External Coding Exercises
 
 - Free Code Camp
