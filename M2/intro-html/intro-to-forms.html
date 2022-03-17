@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro To Forms</title>
+  </head>
+  <body>
+    <h1>Independent Study Application</h1>
+    <p>Required Fields *</p>
+    <!-- inline css styles example -->
+    <section
+      style="
+        width: auto;
+        max-height: 500px;
+        background-color: rgb(129, 129, 246);
+        border-radius: 50px;
+      "
+    >
+      <form>
+        <h3>Program Location(s)</h3>
+        <p>Select all that apply</p>
+        <label>
+          <input
+            id="africa-program-location-input"
+            type="checkbox"
+            name="program-location"
+          />
+          Africa
+        </label>
+        <label>
+          <input
+            id="asia-program-location-input"
+            type="checkbox"
+            name="program-location"
+          />
+          Asia
+        </label>
+        <label>
+          <input
+            id="north-america-program-location-input"
+            type="checkbox"
+            name="program-location"
+          />
+          North America
+        </label>
+        <label>
+          <input
+            id="south-america-program-location-input"
+            type="checkbox"
+            name="program-location"
+          />
+          South America
+        </label>
+        <label>
+          <input
+            id="europe-program-location-input"
+            type="checkbox"
+            name="program-location"
+          />
+          Europe
+        </label>
+        <label>
+          <input
+            id="australia-program-location-input"
+            type="checkbox"
+            name="program-location"
+          />
+          Australia/Oceania
+        </label>
+        <label>
+          <input
+            id="antarctica-program-location-input"
+            type="checkbox"
+            name="program-location"
+          />
+          Antarctica
+        </label>
+        <h3>Requires Visa?</h3>
+        <label>
+          <input id="yes-visas-input" type="radio" name="requires-visa" />
+          Yes
+        </label>
+        <label>
+          <input id="no-visa-input" type="radio" name="requires-visa" />
+          No
+        </label>
+        <h3>Personal Information</h3>
+        <!-- input is a self-closing tag -->
+        <!-- hi it's me!! -->
+        <!-- link a label & input using nesting! -->
+        <label>
+          First *
+          <input
+            id="first-name-input"
+            type="text"
+            placeholder="first name"
+            required
+          />
+        </label>
+        <!-- link a label & input using the for keyword -->
+        <label for="last-name-input"> Last *</label>
+        <input
+          id="last-name-input"
+          type="text"
+          placeholder="last name"
+          required
+        />
+        <label>
+          Email *
+          <input
+            id="email-input"
+            type="email"
+            placeholder="email@email.com"
+            required
+          />
+        </label>
+        <h3>Program Information</h3>
+        <select id="type-program-input" name="program" required>
+          <option>Select a Program Type *</option>
+          <option value="bachelor-of-arts">Bachelor of Arts</option>
+          <option value="bachelor-of-science">Bachelor of Science</option>
+          <option value="semester-abroad">Semester Abroad</option>
+        </select>
+        <label>
+          Length *
+          <input
+            id="length-input"
+            type="text"
+            placeholder="program length in months"
+            required
+          />
+        </label>
+        <label>
+          Start Date *
+          <input
+            id="start-date-input"
+            type="date"
+            placeholder="mm/dd/yy"
+            required
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
