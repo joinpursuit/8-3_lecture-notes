@@ -1,0 +1,43 @@
+/* 1. */
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  border-bottom: 3px solid red;
+}
+
+p {
+  color: green;
+  font-family: Helvetica, serif;
+}
+
+p {
+  color: blue;
+}
+
+h2:hover {
+  color: pink;
+}
+
+/* 3. */
+
+/* p {
+  background: yellow;
+  height: 200px;
+  overflow: scroll;
+} */
+
+/* 4. */
+
+/* h1 {
+  color: red;
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}  */
