@@ -31,10 +31,12 @@ When you are given independent review time or study hall, we recommend the follo
 
 ### External Coding Exercises
 
-- Free Code Camp
-- Codecademy
-- Code Wars
-- Scrimba
+- [Free Code Camp](https://www.freecodecamp.org/)
+- [Codecademy](https://www.codecademy.com/)
+- [Code Wars](https://www.codewars.com/dashboard)
+- [Scrimba](https://scrimba.com/)
+- [LeetCode](https://leetcode.com/)
+- [Brilliant.org](https://brilliant.org/)
 
 ### External Technical Content
 
