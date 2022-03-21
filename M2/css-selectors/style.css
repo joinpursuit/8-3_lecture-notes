@@ -1,0 +1,16 @@
+#jaws {
+  color: blue;
+}
+
+.important-quote {
+  border-bottom: 3px solid gold;
+}
+
+h2 .movie-title {
+  font-size: 30px;
+  color: green;
+}
+
+.favorite-movie::before {
+  content: "Favorite Movie: ";
+}
