@@ -1,0 +1,16 @@
+section {
+  width: 80%;
+  margin: 16px auto;
+}
+
+article {
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+  margin: 4px;
+  border: 5px solid purple;
+}
+
+p span {
+  color: peachpuff;
+}
