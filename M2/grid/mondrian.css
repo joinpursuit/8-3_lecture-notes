@@ -6,7 +6,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   justify-content: center;
   grid-gap: 5px;
   grid-auto-rows: minmax(120px, auto);
@@ -18,5 +18,5 @@ body {
   padding: 20px;
   font-size: 14px;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid white;
 }
