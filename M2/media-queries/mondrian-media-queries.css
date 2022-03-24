@@ -1,0 +1,48 @@
+/* Mobile First Design */
+body {
+  padding: 20px;
+  font-family: Helvetica;
+  background-color: black;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  justify-content: center;
+  grid-gap: 5px;
+  grid-auto-rows: minmax(120px, auto);
+}
+
+.box {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+/* For Ipad Users and Up */
+@media (min-width: 768px) {
+  .box {
+    border-style: dotted;
+    background-color: rgb(20, 206, 220);
+  }
+}
+
+@media (min-width: 912px) {
+  .box {
+    border-style: dashed;
+    background-color: rgb(220, 20, 97);
+  }
+}
+
+@media (min-width: 3440px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(600px, 2fr));
+  }
+  .box {
+    border-style: dashed;
+    background-color: rgb(189, 161, 0);
+  }
+}
