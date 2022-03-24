@@ -1,0 +1,30 @@
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
+}
+
+.flex-item {
+  height: 100px;
+  width: 100px;
+}
+
+.purple {
+  background-color: purple;
+}
+.blue {
+  background-color: blue;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}
