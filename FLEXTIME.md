@@ -9,6 +9,8 @@ Examples of some of the uses for instructor led review sessions:
 - Exercise Review
 - Coding Best Practices
 - Extracurricular Technical Content
+  - Github Issues “bug ticketing” system
+  - Callbacks vs Promises baking activity
 
 ## Independent Activities
 
