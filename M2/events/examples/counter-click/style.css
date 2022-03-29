@@ -1,0 +1,13 @@
+h1 {
+  color: blue;
+}
+
+h1 span {
+  color: midnightblue;
+}
+
+p {
+  background: yellow;
+  margin: 0;
+  padding: 10px;
+}
