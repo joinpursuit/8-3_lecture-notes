@@ -1,0 +1,13 @@
+h1 {
+  color: blue;
+}
+
+h1 span {
+  color: midnightblue;
+}
+
+button {
+  background: white;
+  margin: 0;
+  padding: 10px;
+}
