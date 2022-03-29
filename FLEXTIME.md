@@ -11,6 +11,7 @@ Examples of some of the uses for instructor led review sessions:
 - Extracurricular Technical Content
   - Github Issues “bug ticketing” system
   - Callbacks vs Promises baking activity
+  - Emagi Project
 
 ## Independent Activities
 
