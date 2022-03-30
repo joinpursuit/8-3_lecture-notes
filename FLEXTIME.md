@@ -12,6 +12,8 @@ Examples of some of the uses for instructor led review sessions:
   - Github Issues “bug ticketing” system
   - Callbacks vs Promises baking activity
   - Emagi Project
+  - Event Capturing vs. Bubbling
+  - Engine Internals: Event Loop
 
 ## Independent Activities
 
