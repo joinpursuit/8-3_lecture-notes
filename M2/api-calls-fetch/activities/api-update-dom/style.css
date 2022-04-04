@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Playfair+Display&display=swap');
+
+html, body {
+  color: #46494C;
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+header {
+  background: #0E1C36;
+  border-bottom: 3px solid #1C77C3;
+  color: #FFFAFB;
+}
+
+header h1 {
+  padding: 25px;
+}
+
+header h1 span {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+header a, a:hover {
+  color: #1C77C3;
+}
+
+main {
+  margin: 25px auto;
+  width: 80%;
+}
+
+.error {
+  border: 3px solid #AA5042;
+  padding: 25px;
+  text-align: center;
+}
+
+.card {
+  border: 3px solid #0E1C36;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  width: 50%;
+}
+
+.card img {
+  border: 3px solid #0E1C36;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
