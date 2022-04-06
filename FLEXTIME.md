@@ -45,3 +45,10 @@ When you are given independent review time or study hall, we recommend the follo
 
 - Youtube
 - Eloquent JavaScript
+
+### Create Personal Resources
+
+- Configure/update dev environment
+- Explore a new tool/plugin/library/framework
+- Create a studyguide/cheatsheet
+- Work on an independent project related to our current course content
