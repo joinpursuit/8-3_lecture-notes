@@ -52,3 +52,4 @@ When you are given independent review time or study hall, we recommend the follo
 - Explore a new tool/plugin/library/framework
 - Create a studyguide/cheatsheet
 - Work on an independent project related to our current course content
+- Ask for or offer another Fellow tutoring help
