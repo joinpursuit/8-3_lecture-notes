@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html,
+body {
+  color: #2cad68;
+  font-family: 'Rubik Puddles', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-family: 'Rubik';
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Rubik Puddles', cursive;
+  margin: 0;
+}
+
+header {
+  background: #599eff;
+  border-bottom: 3px solid #2cad68;
+  color: #fffafb;
+}
+
+header h1 {
+  padding: 25px;
+}
+
+header h1 span {
+  font-family: 'Rubik Puddles', cursive;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+header a,
+a:hover {
+  color: #fffafb;
+}
+
+main {
+  margin: 25px auto;
+  text-align: center;
+  width: 80%;
+}
+
+form {
+  border-bottom: 2px solid #2cad68;
+  padding: 25px;
+}
+
+form input {
+  border: 1px solid #599eff;
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+}
+
+form button {
+  background: #2cad68;
+  border: 1px solid #2cad68;
+  border-radius: 5px;
+  color: #fffafb;
+  font-family: 'Rubik Puddles', cursive;
+  font-size: 20pxpx;
+  padding: 10px;
+}
+
+.error {
+  border: 3px solid #ff6459;
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.error .message {
+  color: #ff6459;
+}
