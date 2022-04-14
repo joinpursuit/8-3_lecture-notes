@@ -1,0 +1,16 @@
+body {
+  background-color: tan;
+  color: black;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+body {
+  background-color: blue;
+  color: white;
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+body {
+  background-color: olive;
+  color: white;
+}
