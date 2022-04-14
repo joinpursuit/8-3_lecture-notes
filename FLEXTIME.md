@@ -9,7 +9,7 @@ Examples of some of the uses for instructor led review sessions:
 - Exercise Review
 - Coding Best Practices
 - Extracurricular Technical Content
-  - Github Issues “bug ticketing” system
+  - Github Issues “bug ticketing” system | [📹 Recording](https://us06web.zoom.us/rec/share/62iKMgV4HyzV_h_AXWKwDu_4DRd5rm-IRFSSFtS0oLdmPF9e8bTZGl2Df_nbG7Oq.ww0Q7Fu2LvWVAJ7-?startTime=1648753173000)
   - Callbacks vs Promises baking activity
 
 ## Independent Activities
@@ -45,3 +45,11 @@ When you are given independent review time or study hall, we recommend the follo
 
 - Youtube
 - Eloquent JavaScript
+
+### Create Personal Resources
+
+- Configure/update dev environment
+- Explore a new tool/plugin/library/framework
+- Create a studyguide/cheatsheet
+- Work on an independent project related to our current course content
+- Ask for or offer another Fellow tutoring help
