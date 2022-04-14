@@ -3,14 +3,25 @@ body {
   color: black;
 }
 
-/* On screens that are 992px wide or less, the background color is blue */
-body {
-  background-color: blue;
-  color: white;
+p {
+  display: inline;
 }
 
 /* On screens that are 600px wide or less, the background color is olive */
-body {
-  background-color: olive;
-  color: white;
+@media (min-width: 600px) {
+  body {
+    background-color: olive;
+    color: white;
+  }
+  p {
+    display: grid;
+  }
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media (min-width: 992px) {
+  body {
+    background-color: blue;
+    color: white;
+  }
 }
