@@ -31,8 +31,8 @@ Some cypress commands use default assertions meaning that the expected result is
 - Cypress tests don't have to assert to be useful. This is because many commands have a built in Default Assertion.
 - Assertions for commands are not explicitly mentioned
 
-## Example Cypress Test Repos
+## Example Cypress Test Repo
 
-[DOM Form Interactions](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/testing-dom__form-interactions)
+[Kitchen Sink](https://github.com/cypress-io/cypress-example-kitchensink)
 
-[API Requests](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/fundamentals__dynamic-tests-from-api)
+Live Kitchen Sink [Site](https://example.cypress.io/)
