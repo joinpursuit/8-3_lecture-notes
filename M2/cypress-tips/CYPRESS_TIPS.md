@@ -28,7 +28,7 @@ Cypress manages a Promise chain on the developer’s behalf.
 Some cypress commands use default assertions meaning that the expected result is not always immediately apparent.
 ```
 
-- Cypress tests don't have to assert to be useful. This is because many commands have a built in Default Assertion.
+- Cypress tests don't have to assert to be useful. This is because many commands have a built in [Default Assertion](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress#Default-Assertions).
 - Assertions for commands are not explicitly mentioned
 
 ## Example Cypress Test Repo
