@@ -1,8 +1,11 @@
 // IMPORTS and DEPENDENCIES
 import logo from './logo.svg';
 import './App.css';
+// import the new component
+import PersonCard from './Components/PersonCard';
 
 // COMPONENT DEFINITION
+// functional component
 function App() {
   // application component code
   // parent component inside which all other components will be organized and rendered
@@ -22,7 +25,8 @@ function App() {
           - create a new JSX element h1
           - passed in a dynamic variable value using new syntax { var value }
         */}
-        <h1>{myName}</h1>
+        {/* use JSX to display the component */}
+        <PersonCard />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
