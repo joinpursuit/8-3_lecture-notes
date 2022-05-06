@@ -6,15 +6,20 @@ class Animal {
   constructor(name, age) {
     this.name = name;
     this.age = age;
-    this.kingdom = "Animal Kingdom";
+    this.kingdom = 'Animal Kingdom';
   }
 
   speak(sentence) {
     console.log(`${this.name} says "${sentence}"`);
   }
+
+  getAge() {
+    console.log(`${this.name} is ${this.age} years old!`);
+  }
 }
 
-let myDog = new Animal("Sully");
+let myDog = new Animal('Sully', 42);
+myDog.getAge();
 // console.log(myDog.name); // Sully
 // myDog.speak("bark bark!"); // Sully says "bark bark"
 // console.log(typeof myDog); // object
@@ -30,7 +35,7 @@ let myDog = new Animal("Sully");
 //   -> Its a special "context" variable that references a specific class instance
 // What is the "new" keyword used for? Why do we need it / what does it do?
 
-let spike = new Animal("Spike");
+let spike = new Animal('Spike');
 // spike.speak("woof woof");
 
 class Dog extends Animal {
@@ -42,12 +47,31 @@ class Dog extends Animal {
   bark() {
     return `${this.name} barks.`;
   }
+
+  getAge() {
+    console.log(`The DOG named ${this.name} is ${this.age} minutes old!`);
+  }
 }
 
-let trixy = new Dog("trixy", "rottweiler");
-console.log(trixy.bark()); // can trixy bark?
-trixy.speak("Hello 8.3"); // can trixy speak?
-console.log(trixy);
+class ShihTzu extends Dog {
+  constructor(name, age) {
+    super(name, 'Shih Tzu');
+    this.age = age;
+  }
+
+  bark() {
+    console.log('Yip yip yip!');
+  }
+}
+
+let pompom = new ShihTzu('pompom');
+pompom.bark();
+
+let trixy = new Dog('trixy', 'rottweiler');
+trixy.getAge();
+// console.log(trixy.bark()); // can trixy bark?
+// trixy.speak('Hello 8.3'); // can trixy speak?
+// console.log(trixy);
 
 // console.log(trixy instanceof Dog);
 // console.log(trixy instanceof Animal);
