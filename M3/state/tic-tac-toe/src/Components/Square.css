@@ -1,0 +1,6 @@
+.Square {
+    box-sizing: border-box;
+    border: 1px solid black;
+    line-height: 50px;
+}
+
